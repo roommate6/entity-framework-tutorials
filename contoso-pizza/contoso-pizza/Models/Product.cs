@@ -13,7 +13,7 @@ namespace contoso_pizza.Models
 
         public string Name { get; set; } = null!;
 
-        [Column(TypeName = "decimal(6, 2")]
+        [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
     }
 }
