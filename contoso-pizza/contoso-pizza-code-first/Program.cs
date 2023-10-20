@@ -70,16 +70,16 @@ using ContosoPizzaContext context = new ContosoPizzaContext();
 
 #region Delete product from DB
 
-var veggieSpecial = context.Products
-    .Where(p => p.Name == "Veggie Special Pizza")
-    .FirstOrDefault();
+//var veggieSpecial = context.Products
+//    .Where(p => p.Name == "Veggie Special Pizza")
+//    .FirstOrDefault();
 
-if (veggieSpecial is Product)
-{
-    context.Remove(veggieSpecial);
-}
+//if (veggieSpecial is Product)
+//{
+//    context.Remove(veggieSpecial);
+//}
 
-context.SaveChanges();
+//context.SaveChanges();
 
 #endregion
 
