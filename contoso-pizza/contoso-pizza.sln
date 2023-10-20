@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "contoso-pizza-code-first", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "contoso-pizza-db-first", "contoso-pizza-db-first\contoso-pizza-db-first.csproj", "{533615E5-0210-4505-B7D7-BA29B97EB864}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "contoso-pizza-asp-net", "contoso-pizza-asp-net\contoso-pizza-asp-net.csproj", "{A727A62E-BEC6-497B-9E19-295262CA09B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{533615E5-0210-4505-B7D7-BA29B97EB864}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{533615E5-0210-4505-B7D7-BA29B97EB864}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{533615E5-0210-4505-B7D7-BA29B97EB864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A727A62E-BEC6-497B-9E19-295262CA09B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A727A62E-BEC6-497B-9E19-295262CA09B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A727A62E-BEC6-497B-9E19-295262CA09B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A727A62E-BEC6-497B-9E19-295262CA09B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
