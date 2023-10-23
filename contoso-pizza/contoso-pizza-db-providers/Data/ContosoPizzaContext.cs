@@ -17,7 +17,7 @@ namespace contoso_pizza_db_providers.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ContosePizza-Part1;Integrated Security=True;");
+            optionsBuilder.UseSqlite(@"Data Source=ContosoPizza.db");
         }
     }
 }
