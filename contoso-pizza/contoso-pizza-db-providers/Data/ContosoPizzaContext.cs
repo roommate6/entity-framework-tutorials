@@ -17,7 +17,7 @@ namespace contoso_pizza_db_providers.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=ContosoPizza.db");
+            optionsBuilder.UseNpgsql("User ID=postgres;Password=daucufly;Host=localhost;Port=5432;Database=ContosoPizza;");
         }
     }
 }
