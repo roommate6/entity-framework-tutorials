@@ -2,6 +2,7 @@
 using contoso_pizza_db_providers.Models;
 
 using ContosoPizzaContext context = new ContosoPizzaContext();
+context.Database.EnsureCreated();
 
 Product veggieSpecial = new Product()
 {

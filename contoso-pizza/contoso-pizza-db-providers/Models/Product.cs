@@ -9,12 +9,15 @@ namespace contoso_pizza_db_providers.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        public Product()
+        {
+            OrderDetails = new HashSet<OrderDetail>();
+        }
 
-
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         public string Name { get; set; } = null!;
-
-        [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
+
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
