@@ -32,7 +32,7 @@ namespace contoso_pizza_performance_tips.Pages.Products
 
             CustomerId = customerId;
 
-            Product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
+            Product = await _context.Products.FindAsync(id); // tip: find in the snapshot before calling the database
 
             if (Product == null)
             {
