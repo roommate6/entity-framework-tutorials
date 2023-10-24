@@ -19,13 +19,16 @@ namespace contoso_pizza_performance_tips.Pages.Customers
             _context = context;
         }
 
-        public IList<Customer> Customer { get;set; } = default!;
+        public IList<Customer> Customer { get; set; } = default!;
 
         public async Task OnGetAsync()
         {
             if (_context.Customers != null)
             {
-                Customer = await _context.Customers.ToListAsync();
+                Customer = await _context.Customers
+                    .Include(c => c.Orders)
+                    .AsNoTracking() // first tip: skip the snapshot
+                    .ToListAsync();
             }
         }
     }
