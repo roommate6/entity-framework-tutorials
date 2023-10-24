@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-builder.Services.AddDbContext<ContosoPizzaContext>(options =>
+builder.Services.AddDbContextPool<ContosoPizzaContext>(options => // tip: use the pool version of adding a db context to reuse it over and over again
     options
         .UseLazyLoadingProxies() // tip: lazy loding, added a new nuget package also
         .UseSqlServer(builder.Configuration.GetConnectionString("ContosoPizza")));
