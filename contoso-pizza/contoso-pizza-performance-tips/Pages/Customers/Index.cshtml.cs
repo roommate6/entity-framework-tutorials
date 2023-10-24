@@ -26,8 +26,6 @@ namespace contoso_pizza_performance_tips.Pages.Customers
             if (_context.Customers != null)
             {
                 Customer = await _context.Customers
-                    .Include(c => c.Orders)
-                    .AsNoTracking() // first tip: skip the snapshot
                     .ToListAsync();
             }
         }

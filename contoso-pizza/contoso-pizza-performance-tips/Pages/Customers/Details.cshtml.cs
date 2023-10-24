@@ -32,6 +32,7 @@ namespace contoso_pizza_performance_tips.Pages.Customers
                 .Include(c => c.Orders)
                 .ThenInclude(o => o.OrderDetails)
                 .ThenInclude(od => od.Product)
+                .AsSingleQuery() // tip: avoid cartesian explosion
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (customer == null)
