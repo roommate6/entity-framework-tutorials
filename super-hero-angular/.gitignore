@@ -1,0 +1,9 @@
+﻿**/bin/
+**/obj/
+**.vscode/
+**/.vs/
+**/node_modules/
+**/package-lock.json/
+**/.angular/
+**/.prettierrc
+**/launch.json/
