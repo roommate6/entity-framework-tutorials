@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "khJTxbzQ/Uqre5+U0G5CHf4RVz3lsM4/UA1qjl2sJsOrgHce/y0KgB+URkJKKoR8BENs5VUBGOWJX+YKrjieyQ==",
+  "success": true,
+  "projectFilePath": "C:\\custom_space\\github_repositories\\entity-framework-tutorials\\super-hero-angular\\backend\\SuperHero.API\\SuperHero.API\\SuperHero.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fstef\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\fstef\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\fstef\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\fstef\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\fstef\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\fstef\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
