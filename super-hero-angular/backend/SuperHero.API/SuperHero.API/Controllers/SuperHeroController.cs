@@ -21,5 +21,48 @@ namespace SuperHero.API.Controllers
 		{
 			return Ok(await _context.SuperHeroes.ToListAsync());
 		}
+
+		[HttpPost]
+		public async Task<ActionResult<List<SuperHero>>> CreateSuperHero(SuperHero superHero)
+		{
+			_context.SuperHeroes.Add(superHero);
+			await _context.SaveChangesAsync();
+
+			return Ok(await _context.SuperHeroes.ToListAsync());
+		}
+
+		[HttpPut]
+		public async Task<ActionResult<List<SuperHero>>> UpdateSuperHero(SuperHero superHero)
+		{
+			var superHeroFromDatabse = await _context.SuperHeroes.FindAsync(superHero.Id);
+			if (superHeroFromDatabse == null)
+			{
+				return BadRequest("The super hero that you try to modify is top secret and does not exist in our database.");
+			}
+
+			superHeroFromDatabse.Name = superHero.Name;
+			superHeroFromDatabse.FirstName = superHero.FirstName;
+			superHeroFromDatabse.LastName = superHero.LastName;
+			superHeroFromDatabse.Place = superHero.Place;
+
+			await _context.SaveChangesAsync();
+
+			return Ok(await _context.SuperHeroes.ToListAsync());
+		}
+
+		[HttpDelete("{id}")]
+		public async Task<ActionResult<List<SuperHero>>> DeleteSuperHero(int id)
+		{
+			var superHeroFromDatabse = await _context.SuperHeroes.FindAsync(id);
+			if (superHeroFromDatabse == null)
+			{
+				return BadRequest("The super hero that you try to delete is top secret and does not exist in our database.");
+			}
+
+			_context.SuperHeroes.Remove(superHeroFromDatabse);
+			await _context.SaveChangesAsync();
+
+			return Ok(await _context.SuperHeroes.ToListAsync());
+		}
 	}
 }

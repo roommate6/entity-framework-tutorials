@@ -1,16 +1,28 @@
+<button (click)="initializeNewSuperHero()">Create new Super Hero</button>
+
 <table>
   <thead>
     <th>Name</th>
     <th>First name</th>
     <th>Last name</th>
     <th>Place</th>
+    <th></th>
   </thead>
   <tbody>
-    <tr *ngFor="let hero of heroes">
-      <td>{{ hero.name }}</td>
-      <td>{{ hero.firstName }}</td>
-      <td>{{ hero.lastName }}</td>
-      <td>{{ hero.place }}</td>
+    <tr *ngFor="let superHero of superHeroes; index as i">
+      <td>{{ superHero.name }}</td>
+      <td>{{ superHero.firstName }}</td>
+      <td>{{ superHero.lastName }}</td>
+      <td>{{ superHero.place }}</td>
+      <td><button (click)="editSuperHero(i)">Edit</button></td>
     </tr>
   </tbody>
 </table>
+
+<div *ngIf="editing">
+  <app-edit-hero
+    [superHero]="superHeroToEdit"
+    (cancelEvent)="cancelEditing()"
+    (superHeroesUpdated)="updateSuperHeroList($event)"
+  ></app-edit-hero>
+</div>

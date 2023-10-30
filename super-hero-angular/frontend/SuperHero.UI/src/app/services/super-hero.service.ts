@@ -16,4 +16,24 @@ export class SuperHeroService {
   public getSuperHeroes(): Observable<SuperHero[]> {
     return this.http.get<SuperHero[]>(`${environment.apiUrl}/${this.url}`);
   }
+
+  public createSuperHero(superHero: SuperHero): Observable<SuperHero[]> {
+    return this.http.post<SuperHero[]>(
+      `${environment.apiUrl}/${this.url}`,
+      superHero
+    );
+  }
+
+  public updateSuperHero(superHero: SuperHero): Observable<SuperHero[]> {
+    return this.http.put<SuperHero[]>(
+      `${environment.apiUrl}/${this.url}`,
+      superHero
+    );
+  }
+
+  public deleteSuperHero(superHero: SuperHero): Observable<SuperHero[]> {
+    return this.http.delete<SuperHero[]>(
+      `${environment.apiUrl}/${this.url}/${superHero.id}`
+    );
+  }
 }
